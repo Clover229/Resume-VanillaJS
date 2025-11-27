@@ -7,49 +7,93 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- 네비 / 목차 -->
-    <nav class="nav">
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <a href="#about">Resume</a>
+        </div>
 
-    <!-- 소개 섹션 -->
-    <section id="about">
-      <h1 class="underline">안녕하세요, 홍길동입니다.</h1>
-      <p class="underline">웹 퍼블리셔 • Front-end Engineer</p>
-    </section>
-
-    <!-- 경력 / 이력 섹션 -->
-    <section id="experience">
-      <h2 class="underline">Work Experience</h2>
-      <ul>
-        <li class="underline">회사 A (2023- ) — 프론트엔드 개발</li>
-        <li class="underline">회사 B (2020-2023) — UI 개발</li>
-      </ul>
-    </section>
-
-    <!-- 프로젝트 섹션 -->
-    <section id="projects">
-      <h2 class="underline">Projects</h2>
-      <div class="project-list" id="project-list">
-        <!-- JS로 카드들이 여기에 렌더링 됨 -->
+        <nav class="nav">
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
       </div>
-    </section>
+    </header>
 
-    <!-- 연락처 / 기타 섹션 -->
-    <section id="contact">
-      <h2 class="underline">Contact</h2>
-      <p class="underline">이메일: example@example.com</p>
-    </section>
+    <main class="site-main">
+      <div class="container">
+        <!-- hero / 소개 섹션 -->
+        <section id="about" class="hero-section">
+          <div class="hero-inner">
+            <div class="hero-text">
+              <h1>안녕하세요, 전수민 입니다 :) !</h1>
+              <p class="sub underline">웹 퍼블리셔 · Front-end Engineer</p>
+
+              <div class="profile-card">
+                <img
+                  src="assets/images/profile.jpg"
+                  alt="profile"
+                  class="profile-photo"
+                />
+                <div class="profile-meta">
+                  <p>
+                    <strong>전수민</strong> /
+                    <span class="muted">1993.01.12</span>
+                  </p>
+                  <p class="muted">웹 퍼블리셔</p>
+                  <p class="muted">s.young1922@gmail.com</p>
+                  <p class="muted">portfolio · blog · GitHub</p>
+                </div>
+              </div>
+
+              <p class="intro">
+                간단한 자기소개 문장입니다. 웹 표준과 접근성을 고려해 레이아웃을
+                구성합니다.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 경력 섹션 -->
+        <section id="experience" class="section">
+          <h2 class="underline section-title">WORK EXPERIENCE</h2>
+          <div class="experience-list">
+            <p class="underline">테크랩스 — 2025.01 ~ NOW</p>
+            <p class="underline">이전 회사 — 2020 ~ 2024</p>
+          </div>
+        </section>
+
+        <!-- 프로젝트 섹션 -->
+        <section id="projects" class="section">
+          <h2 class="underline section-title">Projects</h2>
+          <div class="project-list" id="project-list">
+            <!-- JS로 렌더링 -->
+          </div>
+        </section>
+
+        <!-- 연락처 -->
+        <section id="contact" class="section">
+          <h2 class="underline section-title">Contact</h2>
+          <p class="underline">이메일: example@example.com</p>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© 2025 이소영 — Front-end Engineer</p>
+        <p class="muted">Designed with ♥ · Built with Vanilla JS</p>
+      </div>
+    </footer>
 
     <!-- Project Modal -->
-    <div id="project-modal" class="modal">
-      <div class="modal-content">
-        <span class="close-btn">&times;</span>
+    <div id="project-modal" class="modal" aria-hidden="true">
+      <div class="modal-content" role="dialog" aria-modal="true">
+        <button class="close-btn" aria-label="Close">&times;</button>
         <h2 class="modal-title"></h2>
         <img class="modal-img" src="" alt="" />
         <p class="modal-desc"></p>
